@@ -1,0 +1,43 @@
+{
+  "name": "context-q",
+  "version": "1.0.0",
+  "description": "Simple Context API Wrapper for React",
+  "main": "dist/ContextQ.js",
+  "scripts": {
+    "build": "NODE_ENV=production ./node_modules/.bin/babel src/ContextQ.js --out-file dist/ContextQ.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "context",
+    "context api"
+  ],
+  "author": {
+    "name": "Naram Kim a.k.a. Unknown",
+    "email": "unknown@grotesq.com",
+    "url": "https://unk.io"
+  },
+  "homepage": "https://github.com/GrotesQ/context-q",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GrotesQ/context-q"
+  },
+  "bugs": {
+    "url": "https://github.com/GrotesQ/context-q/issues",
+    "email": "unknonwn@grotesq.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.3",
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "prettier": "1.18.2",
+    "react": "^16.3.0"
+  }
+}

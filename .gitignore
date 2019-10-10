@@ -1,0 +1,9 @@
+# System
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# Packages
+node_modules
