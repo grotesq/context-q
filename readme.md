@@ -37,6 +37,24 @@ function View(props) {
 export default withContext(View);
 ```
 
+### 연결한 컴포넌트에서 컨텍스트 업데이트
+
+```js
+function View(props) {
+  const updateValue = () => {
+    props.context.update( { value: 'updated' } );
+  }
+  return (
+    <div>
+      <p>Value : {props.context.value}</p>
+      <button onClick={ updateValue }>업데이트</button>
+    </div>
+  )
+}
+
+export default withContext(View);
+```
+
 ## 데모
 
 - [React (via create-react-app)](https://github.com/GrotesQ/cra-with-context-q)
