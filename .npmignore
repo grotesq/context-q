@@ -20,6 +20,5 @@ yarn.lock
 .eslintrc
 .prettierrc
 npm-debug.log
-src
 node_modules
 readme.md
