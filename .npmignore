@@ -11,3 +11,15 @@ node_modules
 # Lock files
 package-lock.json
 yarn.lock
+
+*.swp
+*~
+*.iml
+.*.haste_cache.*
+.babelrc
+.eslintrc
+.prettierrc
+npm-debug.log
+src
+node_modules
+readme.md

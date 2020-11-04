@@ -1,6 +1,6 @@
 {
   "name": "context-q",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple Context API Wrapper for React",
   "main": "dist/ContextQ.js",
   "scripts": {
@@ -17,27 +17,29 @@
     "email": "unknown@grotesq.com",
     "url": "https://unk.io"
   },
-  "homepage": "https://github.com/GrotesQ/context-q",
+  "homepage": "https://github.com/grotesq/context-q",
   "repository": {
     "type": "git",
-    "url": "git://github.com/GrotesQ/context-q"
+    "url": "git://github.com/grotesq/context-q"
   },
   "bugs": {
-    "url": "https://github.com/GrotesQ/context-q/issues",
+    "url": "https://github.com/grotesq/context-q/issues",
     "email": "unknonwn@grotesq.com"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
-  },
   "dependencies": {},
   "devDependencies": {
+    "react": "^16.8.0",
     "@babel/cli": "^7.6.3",
     "@babel/core": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
-    "prettier": "1.18.2",
-    "react": "^16.3.0"
-  }
+    "prettier": "1.18.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

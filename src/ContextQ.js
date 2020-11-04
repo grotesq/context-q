@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-const { Provider: ContextProvider, Consumer } = React.createContext();
+const Context = React.createContext();
+const { Provider: ContextProvider, Consumer } = Context;
 
 export class Provider extends React.Component {
   constructor(props) {
@@ -8,22 +9,22 @@ export class Provider extends React.Component {
 
     this.state = {
       ...(props.defaultState || {}),
-      update: (state, callback) => {
-        this.setState(state, callback);
-      },
+      update: (state, callback) => this.setState(state, callback),
     };
   }
 
   render() {
-    return <ContextProvider value={this.state}>{this.props.children}</ContextProvider>;
+    return (
+      <ContextProvider value={this.state}>
+        {this.props.children}
+      </ContextProvider>
+    );
   }
 }
 
 export const withContext = Component => {
   const WithContextComponent = props => (
-    <Consumer>
-      {context => <Component {...props} context={context} />}
-    </Consumer>
+    <Consumer>{context => <Component {...props} context={context} />}</Consumer>
   );
 
   // for Next.js
@@ -33,8 +34,4 @@ export const withContext = Component => {
   return WithContextComponent;
 };
 
-export default {
-  Provider,
-  Consumer,
-  withContext,
-};
+export default Context;
