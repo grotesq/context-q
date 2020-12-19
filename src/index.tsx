@@ -8,23 +8,19 @@ interface ProviderProps {
   defaultState: any;
 }
 
-export function Provider(props: ProviderProps) {
+export const Provider = (props: ProviderProps) => {
   function update(state: any) {
-    setState({...state,update: update});
+    setState({ ...state, update: update });
   }
-  const [state,setState] = useState({
+  const [state, setState] = useState({
     ...props.defaultState,
     update,
   });
-  return (
-    <ContextProvider value={state}>
-      {props.children}
-    </ContextProvider>
-  )
-}
+  return <ContextProvider value={state}>{props.children}</ContextProvider>;
+};
 
 export const withContext = (Component: any): any => {
-  const WithContextComponent = (props:any) => (
+  const WithContextComponent = (props: any) => (
     <Consumer>{context => <Component {...props} context={context} />}</Consumer>
   );
 
@@ -44,4 +40,4 @@ export default {
   Provider,
   withContext,
   useContextQ,
-}
+};
