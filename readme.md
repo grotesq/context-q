@@ -41,11 +41,10 @@ function App() {
 
 ```js
 // View.js
-import { useContext } from 'react';
-import Context from 'context-q';
+import { useContextQ } from 'context-q';
 
 function View() {
-  const context = useContext(Context);
+  const context = useContextQ();
   return <div>value : {context.value}</div>;
 }
 ```
