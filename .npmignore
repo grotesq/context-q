@@ -12,6 +12,9 @@ node_modules
 package-lock.json
 yarn.lock
 
+# Sources
+/src
+
 *.swp
 *~
 *.iml
