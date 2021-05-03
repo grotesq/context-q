@@ -36,7 +36,8 @@ exports.Context = react_1.createContext(null);
 var ContextProvider = exports.Context.Provider, Consumer = exports.Context.Consumer;
 var Provider = function (props) {
     function update(state) {
-        setState(__assign(__assign({}, state), { update: update }));
+        setState(state);
+        setState(function (prev) { return (__assign(__assign({}, prev), { update: update })); });
     }
     var _a = react_1.useState(__assign(__assign({}, props.defaultState), { update: update })), state = _a[0], setState = _a[1];
     return react_1.default.createElement(ContextProvider, { value: state }, props.children);

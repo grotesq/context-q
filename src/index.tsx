@@ -10,7 +10,8 @@ interface ProviderProps {
 
 export const Provider = (props: ProviderProps) => {
   function update(state: any) {
-    setState({ ...state, update: update });
+    setState(state);
+    setState((prev: any) => ({ ...prev, update }));
   }
   const [state, setState] = useState({
     ...props.defaultState,
